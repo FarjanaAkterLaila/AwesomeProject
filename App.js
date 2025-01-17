@@ -41,16 +41,20 @@ const LoginForm = () => {
       keyboardVerticalOffset={Platform.OS === "ios" ? 100 : 0}
       style={styles.container}
     >
+      {/* Welcome Text Above the Form */}
+      <Text style={styles.welcomeText}>Welcome to Our Website</Text>
+
       <View style={styles.form}>
         <Image
-          source={require("./assets/adaptive-icon.png")}
+          source={require("./assets/295128.png")}
           style={{
-            width: 200,
-            height: 400,
+            width: 120,
+            height: 120,
             alignSelf: "center",
-            marginBottom: 50,
+            marginBottom: 20,
           }}
         />
+
         <Text style={styles.label}>Username</Text>
         <TextInput
           style={styles.input}
@@ -86,6 +90,13 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     paddingHorizontal: 20,
     backgroundColor: "#f5f5f5",
+  },
+  welcomeText: {
+    fontSize: 24,
+    fontWeight: "bold",
+    textAlign: "center",
+    marginBottom: 30,
+    color: "#333",
   },
   form: {
     backgroundColor: "#ffffff",
